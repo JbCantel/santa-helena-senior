@@ -60,12 +60,35 @@
             </div>
 
             <div class="hero__media reveal reveal-delay-2">
-                <div class="placeholder-img placeholder-img--hero">
-                    [Imagem principal — residencial ou idoso com cuidador]
-                </div>
-                <div class="hero__badge">
-                    <span class="hero__badge-icon">✦</span>
-                    <span class="hero__badge-text">Cuidado profissional<br>desde 2014</span>
+                <div class="hero__compose">
+                    <span class="hero__compose-frame" aria-hidden="true"></span>
+                    <span class="hero__compose-grid" aria-hidden="true"></span>
+                    <span class="hero__compose-mono" aria-hidden="true">Sh</span>
+
+                    <span class="hero__compose-tag">
+                        <span class="hero__compose-tag-dot" aria-hidden="true"></span>
+                        Desde 2014 · São João da Boa Vista
+                    </span>
+
+                    <blockquote class="hero__compose-quote">
+                        <span class="hero__compose-quote-mark" aria-hidden="true">“</span>
+                        <p>Onde o cuidado<br>se torna <em>presença</em>.</p>
+                        <span class="hero__compose-quote-rule" aria-hidden="true"></span>
+                        <cite>CCI Santa Helena</cite>
+                    </blockquote>
+
+                    <div class="hero__compose-years">
+                        <span class="hero__compose-years-num">10<small>anos</small></span>
+                        <span class="hero__compose-years-label">de cuidado<br>continuado</span>
+                    </div>
+
+                    <div class="hero__compose-fams">
+                        <span class="hero__compose-fams-icon" aria-hidden="true">✦</span>
+                        <div>
+                            <span class="hero__compose-fams-num">130<sup>+</sup></span>
+                            <span class="hero__compose-fams-label">famílias atendidas</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -648,7 +671,15 @@ Sou imensamente grata ao CCI Santa Helena por proporcionar à minha mãe melhor 
             </div>
 
             <div class="footer__bottom">
-                <p class="footer__copy">&copy; 2025 CCI Santa Helena. Todos os direitos reservados.</p>
+                <p class="footer__copy">
+                    CCI Santa Helena &copy; <span id="currentYear"></span> · São João da Boa Vista – SP
+                    <span class="footer__copy-sep" aria-hidden="true">|</span>
+                    Desenvolvido por
+                    <a href="https://indexamarketing.com.br" target="_blank" rel="noopener" class="footer__credit">
+                        <strong>Indexa</strong>
+                        <img src="https://indexamarketing.com.br/docs/indexa2.png" alt="Indexa Marketing Digital" width="16" height="17" loading="lazy">
+                    </a>
+                </p>
                 <a href="privacidade.html" class="footer__privacidade">Política de Privacidade</a>
             </div>
 
@@ -666,6 +697,8 @@ Sou imensamente grata ao CCI Santa Helena por proporcionar à minha mãe melhor 
         }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
 
 </body>
