@@ -685,7 +685,6 @@ Sou imensamente grata ao CCI Santa Helena por proporcionar à minha mãe melhor 
                         <img src="https://indexamarketing.com.br/docs/indexa2.png" alt="Indexa Marketing Digital" width="16" height="17" loading="lazy">
                     </a>
                 </p>
-                <a href="privacidade.html" class="footer__privacidade">Política de Privacidade</a>
             </div>
 
         </div>
@@ -732,22 +731,6 @@ Sou imensamente grata ao CCI Santa Helena por proporcionar à minha mãe melhor 
         </button>
     </div>
 
-    <!-- ===================================================
-         BANNER DE COOKIES / LGPD
-         =================================================== -->
-    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
-        <div class="cookie-banner__content">
-            <p class="cookie-banner__text">
-                Utilizamos cookies para melhorar sua experiência de navegação e analisar o uso do site. Ao continuar, você concorda com nossa
-                <a href="privacidade.html" class="cookie-banner__link">Política de Privacidade</a>.
-            </p>
-            <div class="cookie-banner__actions">
-                <button type="button" class="cookie-banner__btn cookie-banner__btn--ghost" id="cookieReject">Recusar</button>
-                <button type="button" class="cookie-banner__btn cookie-banner__btn--accept" id="cookieAccept">Aceitar</button>
-            </div>
-        </div>
-    </div>
-
     <!-- Scroll reveal -->
     <script>
         const observer = new IntersectionObserver((entries) => {
@@ -761,26 +744,6 @@ Sou imensamente grata ao CCI Santa Helena por proporcionar à minha mãe melhor 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
         document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        // Banner de cookies
-        (function () {
-            const banner = document.getElementById('cookieBanner');
-            const accept = document.getElementById('cookieAccept');
-            const reject = document.getElementById('cookieReject');
-            const STORAGE_KEY = 'cci-santa-helena-cookies';
-
-            if (!localStorage.getItem(STORAGE_KEY)) {
-                setTimeout(() => banner.classList.add('is-visible'), 800);
-            }
-
-            function close(choice) {
-                localStorage.setItem(STORAGE_KEY, choice);
-                banner.classList.remove('is-visible');
-            }
-
-            accept.addEventListener('click', () => close('accepted'));
-            reject.addEventListener('click', () => close('rejected'));
-        })();
 
         // Popup WhatsApp
         (function () {
