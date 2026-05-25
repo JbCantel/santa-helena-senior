@@ -1,0 +1,64 @@
+# ─────────────────────────────────────────────
+# Credenciais e variáveis de ambiente
+# ─────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+config.php
+credentials.json
+*.key
+*.pem
+
+# ─────────────────────────────────────────────
+# Backups e arquivos compactados (deploy cPanel)
+# ─────────────────────────────────────────────
+*.zip
+*.rar
+*.tar
+*.tar.gz
+*.bak
+backup-*
+backups/
+
+# ─────────────────────────────────────────────
+# Logs
+# ─────────────────────────────────────────────
+*.log
+error_log
+debug.log
+logs/
+
+# ─────────────────────────────────────────────
+# Sistema operacional
+# ─────────────────────────────────────────────
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+$RECYCLE.BIN/
+
+# ─────────────────────────────────────────────
+# Editores e IDEs
+# ─────────────────────────────────────────────
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*~
+
+# ─────────────────────────────────────────────
+# Node / build (caso evolua p/ React/Next)
+# ─────────────────────────────────────────────
+node_modules/
+.next/
+dist/
+build/
+.cache/
+
+# ─────────────────────────────────────────────
+# Arquivos temporários
+# ─────────────────────────────────────────────
+*.tmp
+*.temp
+.tmp/
